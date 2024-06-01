@@ -6,6 +6,10 @@ body {
     padding: 0;
     background-color: #171717;
     color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: flex-end;
 }
 
 .navigation {
