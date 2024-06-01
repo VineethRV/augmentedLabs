@@ -66,8 +66,8 @@ body {
     margin-top: 1rem;
 }
 
-.contact-main .contact-info-section img{
-    width: 50px;
+.contact-main .contact-info-section .about-us-heading img{
+    width: 3rem;
     height: auto;
 }
 .about-us-heading{
@@ -75,9 +75,88 @@ body {
     align-items: center;
     justify-content: left;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
 }
-.contact-main .contact-info-section img:nth-child(3){
-    width: 130px;
+.about-us-heading:nth-child(7){
+    gap: 0.5rem;
+}
+.contact-main .contact-info-section .about-us-heading:nth-child(7) img{
+    width: 4rem;
     height: auto;
+}
+@media only screen and (max-width: 540px){
+    .contact-info-section{
+        width: 90%;
+    }
+    .contact-info-section .about-us-heading{
+        margin-bottom: -2rem;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 0.75rem;
+    }
+    .contact-info-section p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:541px){
+    .contact-info-section{
+        width: 70%;
+    }
+    .contact-info-section .about-us-heading{
+        margin-bottom: -1rem;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 0.75rem;
+    }
+    .contact-info-section p{
+        font-size: 1rem;
+    }
+    .about-us-pictures{
+        width: 500px;
+    }
+}
+@media only screen and (min-width:768px){
+    .contact-info-section{
+        width: 80%;
+    }
+    .contact-info-section .about-us-heading{
+        margin-bottom: 0rem;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 1rem;
+    }
+    .contact-info-section p{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:1024px){
+    body{
+        font-size: 2rem;
+    }
+    .contact-info-section{
+        width: 90%;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 1.5rem;
+    }
+    .contact-info-section p{
+        font-size: 2rem;
+    }
+    .contact-info-section h1{
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width:1025px){
+    .contact-info-section{
+        width: 60%;
+    }
+    .contact-info-section .about-us-heading{
+        margin-bottom: 0rem;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 1rem;
+    }
+    .contact-info-section p{
+        font-size: 1rem;
+    }
 }
