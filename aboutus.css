@@ -59,17 +59,13 @@ body {
     text-decoration: underline;
 }
 
-.contact-info-section img {
+.contact-info-section .office-pic {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-top: 1rem;
 }
 
-.contact-main .contact-info-section .about-us-heading img{
-    width: 3rem;
-    height: auto;
-}
 .about-us-heading{
     display: flex;
     align-items: center;
@@ -77,14 +73,17 @@ body {
     flex-direction: row;
     gap: 1rem;
 }
-.about-us-heading:nth-child(7){
-    gap: 0.5rem;
-}
-.contact-main .contact-info-section .about-us-heading:nth-child(7) img{
-    width: 4rem;
-    height: auto;
-}
 @media only screen and (max-width: 540px){
+    .contact-main .contact-info-section .about-us-heading:nth-child(7){
+        gap: 5px;
+    }
+    .contact-main .contact-info-section .about-us-heading:nth-child(7) img{
+        margin-top: 5px;
+        width: 2.5rem;
+    }
+    .contact-main .contact-info-section .about-us-heading img{
+        width: 2rem;
+    }
     .contact-info-section{
         width: 90%;
     }
@@ -99,6 +98,16 @@ body {
     }
 }
 @media only screen and (min-width:541px){
+    .contact-main .contact-info-section .about-us-heading:nth-child(7){
+        gap: 5px;
+    }
+    .contact-main .contact-info-section .about-us-heading:nth-child(7) img{
+        margin-top: 5px;
+        width: 2.5rem;
+    }
+    .contact-main .contact-info-section .about-us-heading img{
+        width: 2rem;
+    }
     .contact-info-section{
         width: 70%;
     }
@@ -116,6 +125,16 @@ body {
     }
 }
 @media only screen and (min-width:768px){
+    .contact-main .contact-info-section .about-us-heading:nth-child(7){
+        gap: 5px;
+    }
+    .contact-main .contact-info-section .about-us-heading:nth-child(7) img{
+        margin-top: 15px;
+        width: 4rem;
+    }
+    .contact-main .contact-info-section .about-us-heading img{
+        width: 3.5rem;
+    }
     .contact-info-section{
         width: 80%;
     }
@@ -130,17 +149,25 @@ body {
     }
 }
 @media only screen and (min-width:1024px){
-    body{
-        font-size: 2rem;
+    .contact-main .contact-info-section .about-us-heading:nth-child(7){
+        gap: 5px;
+    }
+    .contact-main .contact-info-section .about-us-heading:nth-child(7) img{
+        margin-top: 20px;
+        width: 3.5rem;
+    }
+    .contact-main .contact-info-section .about-us-heading img{
+        margin-top: 20px;
+        width: 3rem;
     }
     .contact-info-section{
         width: 90%;
     }
     .contact-info-section .about-us-heading{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .contact-info-section p{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .contact-info-section h1{
         font-size: 4rem;
@@ -158,5 +185,25 @@ body {
     }
     .contact-info-section p{
         font-size: 1rem;
+    }
+}
+@media only screen and (max-height:600px){
+    body{
+        font-size: 1rem;
+    }
+    .contact-info-section{
+        width: 60%;
+    }
+    .contact-info-section h1{
+        font-size: 2rem;
+    }
+    .contact-info-section .about-us-heading{
+        margin-bottom: 0rem;
+    }
+    .contact-info-section .about-us-heading{
+        font-size: 0.7rem;
+    }
+    .contact-info-section p{
+        font-size: 0.8rem;
     }
 }
