@@ -5,6 +5,9 @@ var index = 0;
 var speed = 75; // Adjust speed as desired (lower is faster)
 var isDeleting = false;
 var blinkCount = 0;
+var navCount= 0 ;
+var nav_button=document.getElementsByClassName("nav-button")[0]
+var nav_panel=document.getElementsByClassName("navigation")[0]
 function typeWriter() {
     if (index < text.length && !isDeleting) {
       textElement.textContent += text.charAt(index);
@@ -27,5 +30,18 @@ function typeWriter() {
       setTimeout(typeWriter, speed);
     }
   }
-
+function navi(){
+  if (navCount%2==0){
+    nav_button.style.marginLeft="0%"
+    nav_panel.style.marginLeft="0%"
+    nav_panel.style.transition="0.5s"
+    nav_button.style.transition="0.5s"
+    navCount++
+  }
+  else{
+    nav_button.style.marginLeft="160%"
+    nav_panel.style.marginLeft="-30%"
+    navCount++
+  }
+}
 typeWriter();

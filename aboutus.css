@@ -12,30 +12,22 @@ body {
     align-content: flex-end;
 }
 
-.navigation {
-    background-color: #212121;
-    padding: 1rem 0;
-  }
-  
-  .navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 /* Contact Page Styles */
 
 .contact-main {
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 4rem 2rem;
 }
 
 .contact-info-section {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    height: 100%;
     width: 60%;
     background-color: #212121;
     padding: 2rem;

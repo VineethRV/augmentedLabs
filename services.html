@@ -11,8 +11,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     </head> 
     
-    <body >
+    <body>
         <nav class="navigation">
+            <button class="nav-button" onclick="navi()">
+                <div class="nav-button-lines"></div>
+                <div class="nav-button-lines"></div>
+                <div class="nav-button-lines"></div>
+            </button>
             <ul>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -20,7 +25,7 @@
             </ul>
         </nav>
         <main>
-            <div class="description">
+            <div class="description hide textLeft">
                 <h1>3D Printing</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore dolores amet esse dolorem qui impedit repellendus hic reprehenderit, sit ipsum ea doloremque quia quisquam eaque cum veniam magnam quod.
                 Iure pariatur beatae consequuntur et esse quas nesciunt at officia cum itaque, aperiam nisi commodi, non voluptatibus eos eligendi. Impedit iure vitae architecto beatae alias error laboriosam laudantium reprehenderit animi.
@@ -28,7 +33,7 @@
                 Impedit quos laudantium ea autem fuga dolore facilis vitae, repudiandae, aperiam qui voluptatum, amet nostrum consectetur? Dignissimos, ut aliquam. Quidem, in eos? Quisquam libero voluptatem, possimus velit ex repellat consectetur.</p>
                 <button class="access-btn">Access Now <i class="fas fa-arrow-right"></i></button>
             </div>
-            <img src="picutres/printer.png" alt="Printer">
+            <img src="picutres/printer.png" alt="Printer" class="hide imgRight">
         </main>
 
         <section class="why-print">
@@ -47,31 +52,31 @@
             <h1>Gallery</h1>
             <div class="gallery-item">
                 <div class="gallery-sub-item">
-                    <div><h2>Detail.</h2>
+                    <div class="hide textLeft"><h2>Detail.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
                 
                         </div>
-                    <img src="picutres/benchy.jpg" alt="Image 1">
+                    <img src="picutres/benchy.jpg" alt="Image 1" class="hide imgRight">
                 </div>
                 <div class="gallery-sub-item">
-                    <div><h2>Precision.</h2>
+                    <div class="hide textRight"><h2>Precision.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
                     </div>
-                    <img src="picutres/precision.jpg" alt="Image 1">
+                    <img src="picutres/precision.jpg" alt="Image 1" class="hide imgLeft">
                 </div>
                 <div class="gallery-sub-item">
-                    <div>
+                    <div class="hide textLeft">
                         <h2>Quality.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
                     </div>
-                    <img src="picutres/sizeCompare.jpg" alt="Image 1">
+                    <img src="picutres/sizeCompare.jpg" alt="Image 1" class="hide imgRight">
                 </div>
                 <div class="gallery-sub-item">
-                    <div>
+                    <div class="hide textRight">
                         <h2>Volume.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
                     </div>
-                    <img src="picutres/pbrao.jpg" alt="Image 1">
+                    <img src="picutres/pbrao.jpg" alt="Image 1" class="hide imgLeft">
                 </div>
             </div>
         </section>
@@ -80,6 +85,21 @@
         <footer class="footer">
             <p>&copy; 2024 Augmented Labs. All Rights Reserved.</p>
         </footer>
+        <script>
+            const observer= new IntersectionObserver((entries)=>{
+              entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                  entry.target.classList.add("show")
+                }
+                else{
+                  entry.target.classList.remove("show")
+                }
+              })
+            })
+            var hiddenImages=document.querySelectorAll(".hide")
+            hiddenImages.forEach((img)=> observer.observe(img))
+        </script>
         <script src="script.js"></script>  
     </body>
 </html>
