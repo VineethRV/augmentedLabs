@@ -32,15 +32,15 @@ function typeWriter() {
   }
 function navi(){
   if (navCount%2==0){
-    nav_button.style.marginLeft="0%"
-    nav_panel.style.marginLeft="0%"
+    nav_button.style.marginTop="0%"
+    nav_panel.style.marginTop="0%"
     nav_panel.style.transition="0.5s"
     nav_button.style.transition="0.5s"
     navCount++
   }
   else{
-    nav_button.style.marginLeft="160%"
-    nav_panel.style.marginLeft="-30%"
+    nav_button.style.marginTop="100%"
+    nav_panel.style.marginTop="-100%"
     navCount++
   }
 }

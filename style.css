@@ -162,16 +162,20 @@ a {
 }
 
 @media only screen and (max-width: 430px) {
+  .navigation a img{
+    margin-left: 18rem;
+  }
   .navigation {
       position: absolute;
-      width: 30%;
+      width: 100%;
       display: flex;
       justify-content: start;
       align-items: center;
       flex-direction: column;
-      height: 100%;
+      height: 16rem;
       z-index: 1;
-      margin-left: -30%;
+      margin-top: -100%;
+      margin-left: 0%;
   }
 
   .navigation ul {
@@ -181,16 +185,21 @@ a {
       align-items: start;
       text-align: center;
       gap: 1.3rem;
-      margin-top: 4rem;
+      margin-top: 1rem;
       font-size: 1.2rem;
   }
 
   .navigation ul li {
-      width: 100%;
+      text-align: left;
+      padding-left: 10px;
+      width: 97%;
       border-bottom: #fff 1px solid;
       padding-bottom: 1rem;
   }
-
+  .navigation ul li:nth-child(1) {
+    border-top: #fff 1px solid;
+    padding-top: 1rem;
+  }
   .nav-button {
       display: flex;
       align-items: center;
@@ -202,7 +211,9 @@ a {
       height: 3rem;
       background: transparent;
       border: none;
-      margin-left: 160%;
+      margin-left: -15%;
+      margin-top: 100%;
+      margin-left: -80%;
   }
 
   .nav-button:active .nav-button-lines {
@@ -283,88 +294,6 @@ main img {
 
 .access-btn:hover {
   background-color: #27ae60;
-}
-
-/* Why Print With Us Section Styles */
-
-.why-print {
-  margin: 4rem 0;
-  padding: 2rem;
-  background-color: #212121;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-
-.why-print h1 {
-  margin-bottom: 1rem;
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #FFF;
-}
-
-.why-print p {
-  font-size: 1.3em;
-}
-
-.why-print ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin: 0;
-  color: #ddd;
-  font-size: 1.3em;
-}
-
-.why-print ul li {
-  margin-bottom: 0.75rem;
-}
-
-/* Gallery Styles */
-
-.gallery {
-  margin: 4rem 0;
-  width: 100%;
-}
-
-.gallery h1 {
-  font-size: 3.5em;
-  padding-left: 2rem;
-}
-
-.gallery-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.gallery-sub-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 3%;
-  margin-bottom: 1rem;
-  width: 40%;
-}
-
-.gallery-sub-item {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  justify-content: space-between;
-  padding: 2.5em 0 2.5em 0;
-  border-bottom: solid 1px #637474;
-}
-
-.gallery-sub-item div h2 {
-  font-size: 2.5em;
-}
-
-.gallery-sub-item div {
-  width: 40%;
-}
-
-.gallery-sub-item:nth-child(2n) {
-  flex-direction: row-reverse;
 }
 
 /* Adjustments for mobile devices */
