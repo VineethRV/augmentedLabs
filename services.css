@@ -143,7 +143,8 @@ main img {
     height: auto;
     border-radius: 3%;
     margin-bottom: 1rem;
-    width: 40%;
+    width: auto;
+    margin-right:5em;
 }
 
 .gallery-sub-item {
@@ -153,6 +154,7 @@ main img {
     justify-content: space-between;
     padding: 2.5em 0 2.5em 0;
     border-bottom: solid 1px #637474;
+    height: 40vh;
 }
 
 .gallery-sub-item div h2 {
@@ -206,6 +208,11 @@ main img {
         width: 100%;
         align-items:flex-start;
         padding-left: 2em;
+        height: auto;
+    }
+    .gallery-sub-item img{
+        width: 40%;
+        margin-left: 2em;
     }
     .gallery-sub-item div{
         width: 90%;
