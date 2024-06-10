@@ -225,9 +225,13 @@ main img {
     }
     .gallery-sub-item p{
         display: block;
+        width: 90%;
     }
     .gallery h1{
         margin-bottom: 0;
+    }
+    .whatsapp-box{
+        width:80%;
     }
 }
 @media only screen and (max-width:430px) {
@@ -248,7 +252,7 @@ main img {
         width: 90%;
     }
     .gallery-sub-item div p {
-        width: 100%;
+        width: 90%;
     }
     .why-print h1{
         font-size: 2em;
@@ -258,5 +262,8 @@ main img {
     }
     .why-print ul{
         font-size: 1em;
+    }
+    .whatsapp-box{
+        width:80% !important;
     }
 }
