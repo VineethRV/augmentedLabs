@@ -229,14 +229,11 @@ main img {
     .gallery h1{
         margin-bottom: 0;
     }
-    .gallery{
-        margin-top: 0;
-    }
 }
 @media only screen and (max-width:430px) {
     .gallery h1{
         font-size: 2.5em;
-        margin-top:-5rem;
+        margin-top:-2rem;
     }
     main img {
         display: none;
