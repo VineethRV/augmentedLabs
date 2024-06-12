@@ -50,11 +50,9 @@ function closeNav(val){
     if (val==1){
       if (arr[arr.length-1]!='2'){
         arr.push("1","1")
-        console.log(arr)
       }
       else{
         arr.push("1")
-        console.log(arr)
       }
     }
     else{
