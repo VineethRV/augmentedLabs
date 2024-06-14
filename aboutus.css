@@ -7,7 +7,6 @@ body {
     background-color: #171717;
     color: #fff;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-content: flex-end;
 }
@@ -27,7 +26,7 @@ body {
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    height: 100%;
+    height: fit-content;
     width: 60%;
     background-color: #212121;
     padding: 2rem;
@@ -41,7 +40,7 @@ body {
     color: #fff;
 }
 
-.contact-info-section p {
+.contact-info-section p{
     font-size: 1.3em;
     margin-bottom: 1rem;
 }

@@ -4,15 +4,79 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Augmented Labs - The Future is Now</title>
-        <link rel="stylesheet" href="SERVICES.css">
+        <link rel="stylesheet" href="services.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <style>
+            #particles-js {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #000000; /* Change to your preferred background color */
+                z-index: -1;
+            }
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .scroll-indicator {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 1em;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .scroll-indicator .arrow {
+                margin-top: 5px;
+                width: 24px;
+                height: 24px;
+                border: 2px solid #fff;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                animation: bounce 2s infinite;
+            }
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0) rotate(45deg);
+                }
+                40% {
+                    transform: translateY(-10px) rotate(45deg);
+                }
+                60% {
+                    transform: translateY(-5px) rotate(45deg);
+                }
+            }
+            .whatsapp-box {
+                background-color: #222;
+                border: 1px solid #fff;
+                border-radius: 10px;
+                padding: 1rem;
+                text-align: center;
+                margin: 2rem auto;
+                width: fit-content;
+            }
+            .whatsapp-box p {
+                margin: 0;
+                font-size: 1em;
+                color: #fff;
+            }
+        </style>
     </head> 
     
-    <body>
-        <nav class="navigation">
+    <body onclick="closeNav(1)">
+        <div id="particles-js"></div>
+        <nav class="navigation" onclick="closeNav(2)">
             <a href="index.html"><img src="picutres/logo.png" alt="LOGO"></a>
             <button class="nav-button" onclick="navi()">
                 <div class="nav-button-lines"></div>
@@ -20,32 +84,36 @@
                 <div class="nav-button-lines"></div>
             </button>
             <ul>
-                <li><a href="PRODUCTS.html">PRODUCTS</a></li>
-                <li><a href="SERVICES.html">SERVICES</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
                 <li><a href="aboutus.html">CONTACT US</a></li>
             </ul>
         </nav>
         <main>
             <div class="description hide textLeft">
-                <h1>3D Printing</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta tempore dolores amet esse dolorem qui impedit repellendus hic reprehenderit, sit ipsum ea doloremque quia quisquam eaque cum veniam magnam quod.
-                Iure pariatur beatae consequuntur et esse quas nesciunt at officia cum itaque, aperiam nisi commodi, non voluptatibus eos eligendi. Impedit iure vitae architecto beatae alias error laboriosam laudantium reprehenderit animi.
-                Cum, quia. Dolores dicta necessitatibus autem dolorum commodi mollitia doloremque maxime pariatur beatae officia quo nostrum quidem soluta architecto ullam rem iure perspiciatis saepe, fugit, exercitationem aperiam unde laboriosam nisi.
-                Impedit quos laudantium ea autem fuga dolore facilis vitae, repudiandae, aperiam qui voluptatum, amet nostrum consectetur? Dignissimos, ut aliquam. Quidem, in eos? Quisquam libero voluptatem, possimus velit ex repellat consectetur.</p>
-                <button class="access-btn">Access Now <i class="fas fa-arrow-right"></i></button>
+                <h1>Get Your 3D Prints Fast and Flawless!</h1>
+                <p>Tired of waiting for your 3D prints? Frustrated with multiple failed attempts and wish you could have your prints instantly? Look no further! Our in-house printers at RV are here to save the day.</p>
+                <p>
+                    With the state-of-the-art Bambu Labs P1S, we deliver perfect prints quickly and efficiently. Plus, our experienced team provides valuable suggestions to make your models more printer-friendly, ensuring faster and better outcomes.</p>
+                <p>  
+                    Enjoy guaranteed free delivery within one day (for RV students only) at unbeatable prices! Contact us now via WhatsApp for an instant quote.</p>
+                <a href="https://wa.me/8217684886/" target="_blank"><button class="access-btn">Get your prints! <i class="fas fa-arrow-right"></i></button></a>
             </div>
             <img src="picutres/printer.png" alt="Printer" class="hide imgRight">
         </main>
-
+        <div class="scroll-indicator">
+            <span>Scroll for more</span>
+            <span class="arrow"></span>
+        </div>
         <section class="why-print">
             <h1>Why Print With Us</h1>
-            <p>We offer high-quality 3D printing SERVICES using cutting-edge technology and top-of-the-line materials. Here are some reasons to choose Augmented Labs for your 3D printing needs:</p>
             <ul>
-                <li>State-of-the-art printers: We use the latest 3D printing technology to ensure exceptional accuracy, detail, and finish for your projects.</li>
-                <li>Wide range of materials: Choose from a variety of materials to perfectly suit your project's requirements, whether it's for durability, flexibility, or aesthetics.</li>
-                <li>Expert team: Our experienced team is here to assist you throughout the entire process, from design consultation to post-printing finishing.</li>
-                <li>Competitive pricing: We offer competitive prices without compromising on quality.</li>
-                <li>Fast turnaround times: Get your 3D prints delivered quickly and efficiently.</li>
+                <li>Instant Free Delivery: Receive your prints within 24 hours at no additional cost! (Exclusive to RV students)</li>
+                <li>Top-Notch Quality: Benefit from our cutting-edge 3D printers ensuring precision with an accuracy of ±0.2mm.</li>
+                <li>Expert Team: Our experienced team will assist you on the way to getting high quality prints.</li>
+                <li>Variety of Materials and Colors: Choose from a wide range of colors, or provide your own spool for a personalized touch.</li>
+                <li>Competitive Pricing: Enjoy premium quality services at prices lower than most online competitors.</li>
             </ul>
         </section>
         
@@ -53,48 +121,63 @@
             <h1>Gallery</h1>
             <div class="gallery-item">
                 <div class="gallery-sub-item">
-                    <div class="hide textLeft"><h2>Detail.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
-                
-                        </div>
+                    <div class="hide textLeft">
+                        <h2>Detail Captured</h2>
+                        <p>Our printing service ensures maximum detail of your idea is encorporated into the final print. The benchy (boat) in the picture sets a good example, with zero stringing and dropping of the prints, a highly detailed print is produced.</p>
+                    </div>
                     <img src="picutres/benchy.jpg" alt="Image 1" class="hide imgRight">
+                    <p>Our printing service ensures maximum detail of your idea is encorporated into the final print. The benchy (boat) in the picture sets a good example, with zero stringing and dropping of the prints, a highly detailed print is produced.</p>
                 </div>
                 <div class="gallery-sub-item">
-                    <div class="hide textRight"><h2>Precision.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
+                    <div class="hide textRight">
+                        <h2>Precision.</h2>
+                        <p>We ensure a precision of ±0.2mm,this means that for most applications you need not provide tolerance. In the image beside, the print(green) has a perfect tight fit on the servo shaft as well as the gear, there was zero tolerance provided in the model.</p>
                     </div>
                     <img src="picutres/precision.jpg" alt="Image 1" class="hide imgLeft">
+                    <p>We ensure a precision of ±0.2mm,this means that for most applications you need not provide tolerance. In the image above, the print(green) has a perfect tight fit on the servo shaft as well as the gear, there was zero tolerance provided in the model.</p>
                 </div>
                 <div class="gallery-sub-item">
                     <div class="hide textLeft">
                         <h2>Quality.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
+                        <p>Even small parts are printed with detail and precision. The part in image is only about 8mm in length and breadth.</p>
                     </div>
                     <img src="picutres/sizeCompare.jpg" alt="Image 1" class="hide imgRight">
+                    <p>Even small parts are printed with detail and precision. The part in image is only about 8mm in length and breadth.</p>
                 </div>
                 <div class="gallery-sub-item">
                     <div class="hide textRight">
                         <h2>Volume.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid optio accusamus et, sequi hic eligendi voluptatum ullam ab ipsam sapiente quam placeat, quia cumque porro iusto repellat vitae nesciunt.</p>
+                        <p>We provide a printing volume of 246mm*246mm*246mm. Extremely long/ large prints can be broken down into a few parts to get it in the proper build space. The one shown in picture had to be 420mm long, so it was printed in 2 parts of 200mm and 220mm</p>
                     </div>
                     <img src="picutres/pbrao.jpg" alt="Image 1" class="hide imgLeft">
+                    <p>We provide a printing volume of 246mm*246mm*246mm. Extremely long/ large prints can be broken down into a few parts to get it in the proper build space. The one shown in picture had to be 420mm long, so it was printed in 2 parts of 200mm and 220mm</p>
                 </div>
             </div>
+            
         </section>
-        <center><button class="access-btn" style="margin-bottom: 20px;">Get your prints now!</button></center>
 
+        <center><div class="whatsapp-box">
+            <center><p>Got a model? Send it to us for instant 3D printing!</p></center>
+            <center><a href="https://wa.me/8217684886/" target="_blank"><button class="access-btn">Get your prints now! <i class="fas fa-arrow-right"></i></button></a></center>
+        </div></center>
         <footer class="footer">
             <p>&copy; 2024 Augmented Labs. All Rights Reserved.</p>
         </footer>
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var scrollIndicator = document.getElementsByClassName('scroll-indicator')[0];
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                scrollIndicator.style.display = 'none';
+                }
+            });
+            });
             const observer= new IntersectionObserver((entries)=>{
               entries.forEach((entry)=>{
                 console.log(entry)
                 if(entry.isIntersecting){
                   entry.target.classList.add("show")
-                }
-                else{
-                  entry.target.classList.remove("show")
                 }
               })
             })
@@ -102,5 +185,8 @@
             hiddenImages.forEach((img)=> observer.observe(img))
         </script>
         <script src="script.js"></script>  
+        <script>
+            particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":5,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":200,"duration":0.1},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+        </script>
     </body>
 </html>

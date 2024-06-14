@@ -5,9 +5,10 @@ var index = 0;
 var speed = 75; // Adjust speed as desired (lower is faster)
 var isDeleting = false;
 var blinkCount = 0;
-var navCount= 0 ;
+var navCount= 1;
 var nav_button=document.getElementsByClassName("nav-button")[0]
 var nav_panel=document.getElementsByClassName("navigation")[0]
+arr=[]
 function typeWriter() {
     if (index < text.length && !isDeleting) {
       textElement.textContent += text.charAt(index);
@@ -39,9 +40,44 @@ function navi(){
     navCount++
   }
   else{
-    nav_button.style.marginTop="100%"
-    nav_panel.style.marginTop="-100%"
+    nav_button.style.marginTop="105%"
+    nav_panel.style.marginTop="-105%"
     navCount++
+  }
+}
+function closeNav(val){
+  if (window.getComputedStyle(document.querySelector('.nav-button')).display=="flex"){
+    if (val==1){
+      if (arr[arr.length-1]!='2'){
+        arr.push("1","1")
+      }
+      else{
+        arr.push("1")
+      }
+    }
+    else{
+      arr.push("2")
+      console.log(arr)
+    }
+    if (arr[arr.length-2]=="1"){
+        nav_button.style.marginTop="105%"
+        nav_panel.style.marginTop="-105%"
+        navCount++
+    }
+    else if (arr[arr.length-2]=="2"){
+      if (navCount%2==0){
+        nav_button.style.marginTop="0%"
+        nav_panel.style.marginTop="0%"
+        nav_panel.style.transition="0.5s"
+        nav_button.style.transition="0.5s"
+        navCount++
+      }
+      else{
+        nav_button.style.marginTop="105%"
+        nav_panel.style.marginTop="-105%"
+        navCount++
+      }
+    }
   }
 }
 typeWriter();
